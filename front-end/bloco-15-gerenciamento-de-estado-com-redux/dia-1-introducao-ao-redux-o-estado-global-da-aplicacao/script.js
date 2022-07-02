@@ -3,4 +3,6 @@ const INITIAL_STATE = {
   index: 0,
 };
 
-const store = Redux.createStore();
+const reducer = (state = INITIAL_STATE, action) => ( state )
+
+const store = Redux.createStore(reducer);
