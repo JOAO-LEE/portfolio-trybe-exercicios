@@ -21,3 +21,16 @@ const reducer = (state = INITIAL_STATE, action) => {
     }
 
 const store = Redux.createStore(reducer);
+
+const nextButton = document.querySelector('#next');
+const nextAction = { type: 'NEXT_COLOR' }
+const previousButton = document.querySelector('#previous');
+const previousAction = { type: 'PREVIOUS_COLOR' }
+
+nextButton.addEventListener('click', () => {
+  store.dispatch(nextAction)
+})
+
+previousButton.addEventListener('click', () => {
+  store.dispatch(previousAction)
+})
