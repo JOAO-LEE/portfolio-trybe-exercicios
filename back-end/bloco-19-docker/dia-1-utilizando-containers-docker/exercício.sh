@@ -30,3 +30,17 @@ $exit
 
 $docker container ps -a 
 
+# Resultado mostrado:
+
+#CONTAINER ID   IMAGE                COMMAND                  CREATED         STATUS                          PORTS     NAMES
+#9e83e4dba2e0   debian:stable-slim   "bash"                   9 minutes ago   Exited (0) About a minute ago             hopeful_einstein
+
+# 🚀 Inicie o mesmo container novamente, sem criar outro. Valide se ele está ativo na lista de containers.
+
+$docker start hopeful_einstein
+$docker container ps -a
+
+# Resultado mostrado:
+
+# CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS                    PORTS     NAMES
+#9e83e4dba2e0   debian:stable-slim   "bash"                   15 minutes ago   Up About a minute                   hopeful_einstein
