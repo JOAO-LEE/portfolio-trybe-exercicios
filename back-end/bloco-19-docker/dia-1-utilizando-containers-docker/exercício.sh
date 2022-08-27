@@ -1,0 +1,4 @@
+# 🚀 Baixe a imagem utilizando a tag: stable-slim, que é uma versão reduzida da distribuição.
+
+$docker pull debian:stable-slim;
+
