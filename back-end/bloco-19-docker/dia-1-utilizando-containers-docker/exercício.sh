@@ -44,3 +44,8 @@ $docker container ps -a
 
 # CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS                    PORTS     NAMES
 #9e83e4dba2e0   debian:stable-slim   "bash"                   15 minutes ago   Up About a minute                   hopeful_einstein
+
+# 🚀 Retome o container que foi criado anteriormente neste exercício.
+
+$docker exec -it hopeful_einstein bash
+
