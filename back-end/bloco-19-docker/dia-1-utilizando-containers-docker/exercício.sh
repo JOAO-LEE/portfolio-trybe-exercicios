@@ -49,3 +49,12 @@ $docker container ps -a
 
 $docker exec -it hopeful_einstein bash
 
+# 🚀 Rode o comando cat /etc/debian_version que deve retornar a versão atual do sistema do container.
+
+$cat etc/debian_version
+
+# Resultado mostrado:
+
+#11.4
+
+
