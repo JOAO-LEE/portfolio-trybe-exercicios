@@ -57,4 +57,7 @@ $cat etc/debian_version
 
 #11.4
 
+# 🚀 Encerre o terminal.
+
+$exit
 
