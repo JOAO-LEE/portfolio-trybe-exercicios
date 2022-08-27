@@ -26,3 +26,7 @@ $cat /etc/*-release;
 
 $exit
 
+# 🚀 Verifique na sua lista de containers qual container se refere ao exercício que acabou de praticar.
+
+$docker container ps -a 
+
