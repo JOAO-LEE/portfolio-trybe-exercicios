@@ -64,3 +64,8 @@ $exit
 # 🚀 Remova somente o container criado para esse exercício.
 
 $docker container rm -f hopeful_einstein
+
+# [BÔNUS] Crie e rode de modo interativo em modo 'Cleanup', a imagem andrius/ascii-patrol.
+
+$docker run -it -rm andrius/ascii-patrol
+
