@@ -61,3 +61,6 @@ $cat etc/debian_version
 
 $exit
 
+# 🚀 Remova somente o container criado para esse exercício.
+
+$docker container rm -f hopeful_einstein
