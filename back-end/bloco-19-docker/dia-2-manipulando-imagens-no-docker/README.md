@@ -27,3 +27,4 @@ docker run my-container -l
 docker run my-container -f gnu hello world
 ```
 ![the custom gnu](images/custom-gnu.png)
+
