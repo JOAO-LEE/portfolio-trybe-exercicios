@@ -24,6 +24,11 @@ docker run my-container -l
 ```
 #### 5. If you would like to make another character or animal say any phrase of you choice, it's just as the step 3, instead you will have to put it's name before the phrase:
 ```javascript
+docker run my-container -f dragon-and-cow hello world
+```
+![the custom dragon and cow](images/custom-dragon-and-cow.png)
+
+```javascript
 docker run my-container -f gnu hello world
 ```
 ![the custom gnu](images/custom-gnu.png)
