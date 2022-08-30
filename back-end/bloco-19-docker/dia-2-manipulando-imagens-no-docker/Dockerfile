@@ -4,4 +4,5 @@ FROM chuanwen/cowsay
 WORKDIR /usr/games/
 
 ENTRYPOINT ["echo"]
-
+# 3 - Utilize o CMD para definir uma mensagem padrão.
+CMD ["Muh!"]
