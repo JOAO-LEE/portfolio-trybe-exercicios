@@ -9,6 +9,10 @@ services:
     environment:
 # 3 - Agora precisamos configurar nosso service com o ghost para utilizar o MySQL. Para isso, defina a variável database__client para mysql;
       database__client: mysql
+# 4 - Defina o nome ghost para o nome do database utilizando a variável database__connection__database;
+      database__connection__database: db
+# 5 - Então, indique a conexão para o nosso MySQL na env database__connection__host;
+      database__connection_user: root
 # 1 - Crie um novo serviço para o nosso banco de dados. Nesse caso, podemos utilizar um mysql, portanto use a imagem mysql:5.7;
   db:
     image: mysql:5.7
