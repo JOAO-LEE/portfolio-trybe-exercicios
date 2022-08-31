@@ -4,9 +4,11 @@ version: '3'
 services:
   ghost:
     image: ghost:1-alpine
-
     ports: 
      - 2368:2368
+    environment:
+# 3 - Agora precisamos configurar nosso service com o ghost para utilizar o MySQL. Para isso, defina a variável database__client para mysql;
+      database__client: mysql
 # 1 - Crie um novo serviço para o nosso banco de dados. Nesse caso, podemos utilizar um mysql, portanto use a imagem mysql:5.7;
   db:
     image: mysql:5.7
