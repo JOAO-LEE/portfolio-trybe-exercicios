@@ -6,3 +6,6 @@ $docker container ps -a
 
 # 6 - Obtenha o Mounts através da propriedade Source, que deve mostrar o volume desse container no Docker Host;
 $docker inspect my-server
+
+# 7 - Agora pare o container httpd:2.4;
+$docker stop my-server
