@@ -1,6 +1,6 @@
 > # Docker
 ## Let's make the *Cowsay*
-If you have Docker in your machine, you can clone this repository and build an image from the Dockerfile.<br>
+If you have Docker in your machine, you can download or copy the Dockerfile and build and image from it.<br><br>
 #### 1. In your terminal run the command: 
 ```javascript
 docker build -t my-container .
