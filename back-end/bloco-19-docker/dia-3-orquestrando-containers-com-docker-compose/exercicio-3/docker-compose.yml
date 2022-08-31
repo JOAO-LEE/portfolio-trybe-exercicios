@@ -7,5 +7,9 @@ services:
 
     ports: 
      - 2368:2368
+# 1 - Crie um novo serviço para o nosso banco de dados. Nesse caso, podemos utilizar um mysql, portanto use a imagem mysql:5.7;
   db:
     image: mysql:5.7
+# 2 - Precisamos definir uma senha root para o nosso bd. Para isso, utilize a variável MYSQL_ROOT_PASSWORD e lembre-se que é possível utilizar a sintaxe ${} para passar uma env do host para a env do container;
+    environment:
+      MYSQL_ROOT_PASSWORD: accessgranted
