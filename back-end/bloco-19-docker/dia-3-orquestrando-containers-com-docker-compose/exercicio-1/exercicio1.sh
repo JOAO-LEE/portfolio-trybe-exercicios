@@ -9,3 +9,6 @@ $docker inspect my-server
 
 # 7 - Agora pare o container httpd:2.4;
 $docker stop my-server
+
+# 8 - Exclua o seu container
+$docker stop my-server
