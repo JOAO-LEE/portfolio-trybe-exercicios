@@ -1,2 +1,5 @@
-#1 - Utilize a versão "3" no arquivo;
+# 1 - Utilize a versão "3" no arquivo;
 version: '3'
+# 2 - Crie um service para subir a plataforma. Para isso, utilize a imagem ghost:1-alpine;
+  service:
+    image: ghost:1-alpine
