@@ -2,4 +2,5 @@
 version: '3'
 # 2 - Crie um service para subir a plataforma. Para isso, utilize a imagem ghost:1-alpine;
   service:
-    image: ghost:1-alpine
+    ghost:
+      image: ghost:1-alpine
