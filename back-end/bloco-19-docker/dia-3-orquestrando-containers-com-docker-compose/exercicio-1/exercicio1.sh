@@ -12,3 +12,6 @@ $docker stop my-server
 
 # 8 - Exclua o seu container
 $docker stop my-server
+
+# 10 - Obtenha o IMAGE ID do servidor;
+$docker image ps 
