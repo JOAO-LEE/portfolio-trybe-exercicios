@@ -14,4 +14,10 @@ $docker stop my-server
 $docker stop my-server
 
 # 10 - Obtenha o IMAGE ID do servidor;
-$docker image ps 
+$docker image ls
+
+##REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+#httpd        2.4       a981c8992512   8 days ago   145MB
+
+# 11 - Depois de obter o IMAGE ID, exclua a imagem.
+$docker rmi a981c8992512
