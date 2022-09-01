@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  wordpress:
+    image: wordpress:latest
+  db:
+    image: mysql:5.7  
