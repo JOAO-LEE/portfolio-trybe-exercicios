@@ -13,11 +13,17 @@ services:
       database__connection__host: db
       database__connection__user: root
       database__connection__password: accessgranted
+    networks:
+      - my-network
   db:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: accessgranted
     volumes:
      - database:/var/lib/mysql
+    networks:
+     - my-network
 volumes:
   database:
+networks:
+  my-network:
