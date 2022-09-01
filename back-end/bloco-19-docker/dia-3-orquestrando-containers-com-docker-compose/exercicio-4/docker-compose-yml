@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  ghost:
+    image: ghost:1-alpine
+    ports: 
+     - 2368:2368
+    depends_on:
+     - "db"
+    environment:
+      database__client: mysql
+      database__connection__database: ghost
+      database__connection__host: db
+      database__connection__user: root
+      database__connection__password: accessgranted
+    networks:
+      - my-network
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: accessgranted
+    volumes:
+     - database:/var/lib/mysql
+    networks:
+     - my-network
+# 1 - Configure o nosso serviço mysql para utilizar um volume conforme vimos no conteúdo. Utilize o caminho target /var/lib/mysql.
+volumes:
+  database:
+# 2 - Em vez de utilizar a rede padrão criada pelo Compose, defina uma rede chamada my-network para a comunicação dos dois serviços.
+networks:
+  my-network:
