@@ -2,9 +2,12 @@ version: '3'
 
 services:
   wordpress:
+# 1 - Utilize a imagem wordpress:latest e mysql:5.7;
     image: wordpress:latest
+# 2 - Faça bind da porta 80 do container do wordpress para 8080 do host;
     ports:
       - 8080:80
+# 3 - Defina as seguintes variáveis para o wordpress:
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
@@ -12,8 +15,13 @@ services:
       WORDPRESS_DB_NAME: wordpress
   db:
     image: mysql:5.7
+# 4 - Defina as seguintes variáveis para o mysql:
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+    volumes:
+      db_data:/var/lib/mysql
+volumes:
+  db_data:
