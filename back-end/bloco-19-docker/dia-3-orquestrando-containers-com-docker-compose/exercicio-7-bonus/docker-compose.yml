@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  wordpress:
+# 1 - Utilize a imagem wordpress:latest e mysql:5.7;
+    image: wordpress:latest
+# 2 - Faça bind da porta 80 do container do wordpress para 8080 do host;
+    ports:
+      - 8080:80
+# 3 - Defina as seguintes variáveis para o wordpress:
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+# 6 - Utilize o parâmetro depends_on para criar dependência entre os serviços;
+    depends_on:
+      - db
+# 7 - Adicione a política de restart com o valor always aos serviços;
+    restart: always
+  db:
+    image: mysql:5.7
+# 4 - Defina as seguintes variáveis para o mysql:
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+# 5 - Defina o volume db_data para o mysql;
+    volumes:
+     - db_data:/var/lib/mysql
+    restart: always
+volumes:
+  db_data:
