@@ -3,3 +3,6 @@ SELECT 'This is SQL Exercise, Practice and Solution';
 
 /* 2 - Escreva uma query para exibir três números em três colunas.*/
 SELECT 2 AS 'first_number', 4 AS 'second_number', 7 AS 'third_number';
+
+/* 3 - Escreva uma query para exibir a soma dos números 10 e 15. */
+SELECT 10 + 15;
