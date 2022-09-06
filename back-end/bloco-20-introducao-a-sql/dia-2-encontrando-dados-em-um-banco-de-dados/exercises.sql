@@ -26,3 +26,7 @@ ORDER BY name DESC;
 
 /* 9 - Escreva uma query que exiba a string "O projeto name precisou de hours horas para ser concluído." para cada projeto.*/
 SELECT CONCAT('O projeto ', name, ' precisou de ', hours, ' horas para ser concluído.') AS conclusion_time FROM Projects;
+
+/* 10 - Escreva uma query para exibir o nome e as horas dos três projetos com a maior quantidade de horas.*/
+SELECT * FROM Projects
+ORDER by hours DESC LIMIT 3;
