@@ -6,3 +6,6 @@ SELECT 2 AS 'first_number', 4 AS 'second_number', 7 AS 'third_number';
 
 /* 3 - Escreva uma query para exibir a soma dos números 10 e 15. */
 SELECT 10 + 15;
+
+/* 4 - Escreva uma query para exibir o resultado de uma expressão aritmética qualquer. */
+SELECT 10 * 5 / 2;
