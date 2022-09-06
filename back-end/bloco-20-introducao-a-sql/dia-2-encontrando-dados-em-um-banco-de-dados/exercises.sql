@@ -23,3 +23,6 @@ ORDER BY name;
 /* 8 - Escreva uma query para exibir o nome dos projetos em ordem alfabética descendente.*/
 SELECT * FROM Projects
 ORDER BY name DESC;
+
+/* 9 - Escreva uma query que exiba a string "O projeto name precisou de hours horas para ser concluído." para cada projeto.*/
+SELECT CONCAT('O projeto ', name, ' precisou de ', hours, ' horas para ser concluído.') AS conclusion_time FROM Projects;
