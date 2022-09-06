@@ -33,3 +33,7 @@ ORDER by hours DESC LIMIT 3;
 
 /* 11 - Escreva uma query para exibir o código de todos os projetos da tabela AssignedTo sem que haja repetições.*/
 SELECT DISTINCT project FROM AssignedTo;
+
+/* 12 - Escreva uma query para exibir o nome do projeto com maior quantidade de horas.*/
+SELECT name FROM Projects
+ORDER BY hours DESC LIMIT 1;
