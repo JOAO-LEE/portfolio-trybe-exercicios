@@ -9,3 +9,6 @@ SELECT 10 + 15;
 
 /* 4 - Escreva uma query para exibir o resultado de uma expressão aritmética qualquer. */
 SELECT 10 * 5 / 2;
+
+/* 5 - Escreva uma query para exibir todas as informações de todos os cientistas. */
+SELECT * FROM Scientists;
