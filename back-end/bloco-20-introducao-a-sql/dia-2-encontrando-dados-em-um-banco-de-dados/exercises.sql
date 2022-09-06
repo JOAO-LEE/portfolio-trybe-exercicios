@@ -41,3 +41,7 @@ ORDER BY hours DESC LIMIT 1;
 /* 13 - Escreva uma query para exibir o nome do segundo projeto com menor quantidade de horas.*/
 SELECT name FROM Projects
 ORDER BY hours DESC LIMIT 1 OFFSET 1;
+
+/* 14 - Escreva uma query para exibir todas as informações dos cinco projetos com a menor quantidade de horas.*/
+SELECT * FROM Projects
+ORDER BY hours LIMIT 5;
