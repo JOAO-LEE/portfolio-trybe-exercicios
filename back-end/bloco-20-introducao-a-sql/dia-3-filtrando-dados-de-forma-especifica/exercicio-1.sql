@@ -15,3 +15,7 @@ ORDER BY name DESC;
 /*5 - Agora, faça uma consulta para exibir o número de empresas (fornecedores) que contém a letra F no código.
 SELECT COUNT(*) AS qt_empresas_parceiras FROM Fornecedores.*/
 WHERE code LIKE '%F%';
+/*6- Quase lá! Agora escreva uma query para exibir os fornecimentos onde as peças custam mais de R$15,00 e menos de $40,00. Ordene os resultados por ordem crescente.*/
+SELECT * FROM Fornecimentos
+WHERE Preco BETWEEN 15 AND 40
+ORDER BY Preco;
