@@ -8,3 +8,7 @@ ORDER BY fornecedor;
 /*3 - Em seguida, faça uma consulta para exibir as peças, preço e fornecedor de todos os fornecimentos em que o código do fornecedor tenha a letra N.*/
 SELECT peca, fornecedor, Preco FROM Fornecimentos
 WHERE fornecedor LIKE '%N%';
+/*4 - Avante, falta pouco! Escreva uma query para exibir todas as informações dos fornecedores que são empresas limitadas (LTDA). Ordene esses resultados em ordem alfabética decrescente.*/
+SELECT * FROM Fornecedores
+WHERE name LIKE '%LTDA'
+ORDER BY name DESC;
