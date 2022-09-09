@@ -9,3 +9,6 @@ ORDER BY name;
 SELECT code, name FROM Projects
 WHERE code LIKE '%3%'
 ORDER BY name;
+/*4 - Escreva uma query para exibir todos os cientistas (valores numéricos) cujos projetos sejam AeH3, Ast3 ou Che1.*/
+SELECT scientist FROM AssignedTo
+WHERE project IN ('AeH3', 'Ast3', 'Che1');
