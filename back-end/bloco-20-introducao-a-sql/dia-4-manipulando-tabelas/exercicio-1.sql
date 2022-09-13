@@ -17,3 +17,8 @@ VALUES (9, 6.8, 450000000, 370000000);
 UPDATE Movies
 SET director = 'Andrew Staton'
 WHERE id = 9;
+
+/*Exercício 4: O título do filme "Ratatouille" está incorreto na tabela Movies. Além disso, o filme foi lançado em 2007 e não em 2010. Corrija esses dados utilizando o comando UPDATE.*/
+UPDATE Movies
+SET title = 'Ratatouille'
+WHERE id = 3;
