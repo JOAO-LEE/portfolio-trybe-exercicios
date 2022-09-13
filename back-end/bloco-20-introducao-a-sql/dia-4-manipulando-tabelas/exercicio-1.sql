@@ -12,3 +12,8 @@ VALUES ('Monstros SA', 'Pete Docter', 2001, 92), ('Procurando Nemo', 'John Lasse
 /*Exercício 2: O filme Procurando Nemo foi classificado em 6.8, fez 450 milhões no mercado interno e 370 milhões no mercado internacional. Insira as informações à tabela BoxOffice.*/
 INSERT INTO BoxOffice (movie_id, rating, domestic_sales, international_sales)
 VALUES (9, 6.8, 450000000, 370000000);
+
+/*Exercício 3: O nome do diretor do filme "Procurando Nemo" está incorreto, ele foi dirigido por Andrew Staton. Corrija esse dado utilizando o comando UPDATE.*/
+UPDATE Movies
+SET director = 'Andrew Staton'
+WHERE id = 9;
