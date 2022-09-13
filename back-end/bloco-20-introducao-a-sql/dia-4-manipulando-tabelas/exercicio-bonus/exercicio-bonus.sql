@@ -8,3 +8,10 @@ UPDATE BoxOffice
 SET rating = 6.0
 WHERE international_sales < 300000000
 AND domestic_sales > 200000000;
+
+/*Exercício 10: Exclua da tabela Movies todos os filmes com menos de 100 minutos de duração.*/
+DELETE FROM BoxOffice 
+WHERE movie_id IN (1, 6, 7, 8);
+
+DELETE FROM Movies
+WHERE length_minutes < 100;
