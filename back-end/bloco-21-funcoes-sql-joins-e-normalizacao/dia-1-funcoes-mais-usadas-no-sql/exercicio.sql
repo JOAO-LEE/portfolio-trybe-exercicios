@@ -41,7 +41,9 @@ UPDATE hr.employees
 SET phone_number = REPLACE(phone_number, '515', '777')
 WHERE phone_number LIKE '515%';
 SET SQL_SAFE_UPDATES = 1;
-/*12. Escreva uma query que só exiba as informações dos funcionários cujo o primeiro nome tenha oito ou mais caracteres.
+/*12. Escreva uma query que só exiba as informações dos funcionários cujo o primeiro nome tenha oito ou mais caracteres.*/
+SELECT * FROM hr.employees
+WHERE LENGTH(first_name) >= 8;
 /*13. Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e ano no qual foi contratado (exiba somente o ano).*/
 /*14. 🚀 Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e dia do mês no qual foi contratado (exiba somente o dia).*/
 /*15. Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e mês no qual foi contratado (exiba somente o mês).*/
