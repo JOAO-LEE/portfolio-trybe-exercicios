@@ -23,6 +23,9 @@ HAVING job_id = 'IT_PROG';
 SELECT job_id, SUM(salary) AS each_paym_amount FROM hr.employees
 GROUP BY job_id;
 /*8. Utilizando a query anterior, faça as alterações para que seja exibido somente a quantidade de dinheiro necessária para cobrir a folha de pagamento das pessoas programadoras (it_prog).*/
+SELECT job_id, SUM(salary) AS each_paym_amount FROM hr.employees
+GROUP BY job_id
+HAVING job_id = 'IT_PROG';
 /*9. Escreva uma query que exiba em ordem decrescente a média salarial de todos os cargos, exceto das pessoas programadoras (it_prog).*/
 /*10. 🚀 Escreva um query que exiba média salarial e o número de funcionários de todos os departamentos com mais de dez funcionários. Dica: agrupe pelo department_id.*/
 /*11. 🚀 Escreva uma query que atualize a coluna phone_number, de modo que todos os telefones iniciados por 515 agora devem iniciar com 777.*/
