@@ -49,6 +49,7 @@ SELECT employee_id, first_name, YEAR(hire_date) AS hire_year FROM hr.employees;
 /*14. 🚀 Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e dia do mês no qual foi contratado (exiba somente o dia).*/
 SELECT employee_id, first_name, DAY(hire_date) AS hire_day FROM hr.employees;
 /*15. Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e mês no qual foi contratado (exiba somente o mês).*/
+SELECT employee_id, first_name, MONTH(hire_date) AS hire_MONTH FROM hr.employees;
 /*16. Escreva uma query que exiba os nomes dos funcionários em letra maiúscula.*/
 /*17: Escreva uma query que exiba o sobrenome e a data de contratação de todos os funcionário contratados em julho de 1987.*/
 /*18: 🚀 Escreva uma query que exiba as seguintes informações de cada funcionário: nome, sobrenome, tempo que trabalha na empresa (em dias). */
