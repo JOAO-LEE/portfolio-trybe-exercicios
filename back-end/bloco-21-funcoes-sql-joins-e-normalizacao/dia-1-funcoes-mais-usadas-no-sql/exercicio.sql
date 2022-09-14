@@ -1,4 +1,5 @@
 /*1. Escreva uma query que exiba o maior salário da tabela.*/
+SELECT MAX(salary) AS max_salary FROM hr.employees;
 /*2. 🚀 Escreva uma query que exiba a diferença entre o maior e o menor salário.*/
 /*3. 🚀 Escreva uma query que exiba a média salarial de cada job_id, ordenando pela média salarial em ordem decrescente.*/
 /*4. Escreva uma query que exiba a quantidade de dinheiro necessária para realizar o pagamento de todas as pessoas funcionárias.*/
