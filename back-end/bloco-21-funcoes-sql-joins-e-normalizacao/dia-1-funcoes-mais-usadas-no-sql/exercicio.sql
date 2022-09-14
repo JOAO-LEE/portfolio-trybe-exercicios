@@ -16,6 +16,9 @@ ROUND(SUM(salary), 2) AS payment_amount,
 ROUND(AVG(salary), 2) AS average_salary
 FROM hr.employees; 
 /*6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras (it_prog).*/
+SELECT COUNT(*) as total FROM hr.employees
+GROUP BY job_id
+HAVING job_id = 'IT_PROG';
 /*7. Escreva uma query que exiba a quantidade de dinheiro necessária para efetuar o pagamento de cada profissão (job_id).*/
 /*8. Utilizando a query anterior, faça as alterações para que seja exibido somente a quantidade de dinheiro necessária para cobrir a folha de pagamento das pessoas programadoras (it_prog).*/
 /*9. Escreva uma query que exiba em ordem decrescente a média salarial de todos os cargos, exceto das pessoas programadoras (it_prog).*/
