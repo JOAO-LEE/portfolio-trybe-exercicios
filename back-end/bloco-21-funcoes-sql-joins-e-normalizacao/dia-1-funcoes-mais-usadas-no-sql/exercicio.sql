@@ -36,6 +36,11 @@ SELECT department_id, COUNT(*) AS employees_count, AVG(salary) FROM hr.employees
 GROUP BY department_id
 HAVING employees_count > 10;
 /*11. 🚀 Escreva uma query que atualize a coluna phone_number, de modo que todos os telefones iniciados por 515 agora devem iniciar com 777.*/
+SET SQL_SAFE_UPDATES = 0;
+UPDATE hr.employees
+SET phone_number = REPLACE(phone_number, '515', '777')
+WHERE phone_number LIKE '515%';
+SET SQL_SAFE_UPDATES = 1;
 /*12. Escreva uma query que só exiba as informações dos funcionários cujo o primeiro nome tenha oito ou mais caracteres.
 /*13. Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e ano no qual foi contratado (exiba somente o ano).*/
 /*14. 🚀 Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e dia do mês no qual foi contratado (exiba somente o dia).*/
