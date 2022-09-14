@@ -10,6 +10,11 @@ ORDER BY average_salary DESC;
 /*4. Escreva uma query que exiba a quantidade de dinheiro necessária para realizar o pagamento de todas as pessoas funcionárias.*/
 SELECT SUM(salary) AS payment_amount FROM hr.employees;
 /*5. 🚀 Escreva uma query que exiba quatro informações: o maior salário, o menor salário, a soma de todos os salários e a média dos salários. Todos os valores devem ser formatados para ter apenas duas casas decimais.*/
+SELECT ROUND(MAX(salary), 2) AS max_salary,
+ROUND(MIN(salary), 2) AS min_salary,
+ROUND(SUM(salary), 2) AS payment_amount,
+ROUND(AVG(salary), 2) AS average_salary
+FROM hr.employees; 
 /*6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras (it_prog).*/
 /*7. Escreva uma query que exiba a quantidade de dinheiro necessária para efetuar o pagamento de cada profissão (job_id).*/
 /*8. Utilizando a query anterior, faça as alterações para que seja exibido somente a quantidade de dinheiro necessária para cobrir a folha de pagamento das pessoas programadoras (it_prog).*/
