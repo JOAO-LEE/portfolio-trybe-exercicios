@@ -18,3 +18,8 @@ FROM `store-sample`.customers AS c
 INNER JOIN orders ON c.CustomerID = orders.CustomerID
 INNER JOIN employees AS e ON orders.EmployeeID = e.EmployeeID
 INNER JOIN shippers AS sh ON sh.ShipperID = orders.ShipperID
+
+-- Retorne o CustomerName e OrderID de todos os customers mesmo
+-- que nunca tenha sido feita uma compra
+SELECT CustomerName AS `cliente`, `ord`.OrderID AS `pedido` FROM customers AS c
+LEFT JOIN orders AS `ord` ON c.CustomerID = `ord`.CustomerID;
