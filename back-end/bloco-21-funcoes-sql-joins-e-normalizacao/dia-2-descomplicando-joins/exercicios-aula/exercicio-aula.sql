@@ -23,3 +23,8 @@ INNER JOIN shippers AS sh ON sh.ShipperID = orders.ShipperID
 -- que nunca tenha sido feita uma compra
 SELECT CustomerName AS `cliente`, `ord`.OrderID AS `pedido` FROM customers AS c
 LEFT JOIN orders AS `ord` ON c.CustomerID = `ord`.CustomerID;
+
+-- Retorne o OrderID, Employees LastName e FirstName de TODOS os employees
+-- mesmo que não haja nenhuma venda (order)
+SELECT `ord`.OrderID, emp.FirstName, emp.LastName FROM orders AS `ord`
+RIGHT JOIN employees AS emp ON emp.EmployeeID = `ord`.CustomerID;
