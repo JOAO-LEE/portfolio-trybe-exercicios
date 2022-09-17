@@ -15,6 +15,13 @@ ON mov.id = box.movie_id
 WHERE international_sales > domestic_sales; 
 
 -- 🚀 Exercício 3: Utilizando o INNER JOIN, faça uma busca que retorne os filmes e sua avaliação (rating) em ordem decrescente.
+SELECT 
+mov.title AS movie, 
+box.rating 
+FROM Movies AS mov
+INNER JOIN BoxOffice AS box 
+ON mov.id = box.movie_id
+ORDER BY rating DESC;
 
 -- Exercício 4: Utilizando o LEFT JOIN, faça uma busca que retorne todos os dados dos cinemas, mesmo os que não possuem filmes em cartaz e, adicionalmente, os dados dos filmes que estão em cartaz nestes cinemas. Retorne os nomes dos cinemas em ordem alfabética.
 
