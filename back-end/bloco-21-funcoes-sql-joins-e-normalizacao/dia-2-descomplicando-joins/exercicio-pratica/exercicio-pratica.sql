@@ -3,10 +3,16 @@ SELECT
 mov.title AS movie, 
 box.international_sales, box.domestic_sales 
 FROM Pixar.Movies AS mov
-INNER JOIN BoxOffice
-AS box ON mov.id = box.movie_id; 
-
+INNER JOIN BoxOffice AS box 
+ON mov.id = box.movie_id; 
 -- 🚀 Exercício 2: Utilizando o INNER JOIN, faça uma busca que retorne o número de vendas para cada filme que possui um número maior de vendas internacionais (international_sales) do que vendas nacionais (domestic_sales).
+SELECT 
+mov.title AS movie, 
+(box.international_sales + box.domestic_sales) AS sales
+FROM Pixar.Movies AS mov
+INNER JOIN BoxOffice AS box 
+ON mov.id = box.movie_id
+WHERE international_sales > domestic_sales; 
 
 -- 🚀 Exercício 3: Utilizando o INNER JOIN, faça uma busca que retorne os filmes e sua avaliação (rating) em ordem decrescente.
 
