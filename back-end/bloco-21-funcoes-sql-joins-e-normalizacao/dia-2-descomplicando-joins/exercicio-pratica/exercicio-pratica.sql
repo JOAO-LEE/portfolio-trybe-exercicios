@@ -39,3 +39,4 @@ FROM Theater AS th
 RIGHT JOIN Movies AS mov
 ON th.id = mov.theater_id
 ORDER BY t.name;
+-- 🚀 Exercício 6: Utilizando o INNER JOIN, selecione todas as informações dos filmes que estão em cartaz (possuem theater_id diferente de NULL) com avaliação maior que 8.
