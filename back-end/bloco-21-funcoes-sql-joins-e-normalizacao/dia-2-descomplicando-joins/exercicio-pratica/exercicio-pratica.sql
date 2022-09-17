@@ -34,8 +34,8 @@ ORDER BY th.name;
 
 -- Exercício 5: Utilizando o RIGHT JOIN, faça uma busca que retorne todos os dados dos filmes, mesmo os que não estão em cartaz e, adicionalmente, os dados dos cinemas que possuem estes filmes em cartaz. Retorne os nomes dos cinemas em ordem alfabética.
 SELECT
-t.id, t.name, t.location, m.title, m.director, m.year, m.length_minutes
-FROM Theater t
-RIGHT JOIN Movies m
-ON t.id = m.theater_id
+th.id, th.name, th.location, mov.title, mov.director, mov.year, mov.length_minutes
+FROM Theater AS th
+RIGHT JOIN Movies AS mov
+ON th.id = mov.theater_id
 ORDER BY t.name;
