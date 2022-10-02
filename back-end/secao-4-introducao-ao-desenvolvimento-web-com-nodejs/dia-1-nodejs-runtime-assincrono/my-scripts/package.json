@@ -1,0 +1,14 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "This script calculates the body mass index.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joao lee",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
