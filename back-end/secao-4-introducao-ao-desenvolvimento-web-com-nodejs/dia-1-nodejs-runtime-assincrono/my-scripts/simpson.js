@@ -1,7 +1,8 @@
 const fs = require('fs').promises;
 
 async function getAllSimpsons(){
-  const simpsons = await fs.readFile('./simpsons.json', 'utf-8');
+  const simpsons = await fs
+    .readFile('./simpsons.json', 'utf-8');
   const convertedSimpsons = await JSON.parse(simpsons);
   const allSimpsons = await convertedSimpsons.map(({id, name}) => {
     console.log(`${id} - ${name}`)
@@ -20,22 +21,27 @@ async function getSimpsonById(id){
   return chosenid;
 }
 async function removeSixthAndTenthChar() {
-  const simpsons = await fs.
-    readFile('./simpsons.json', 'utf-8');
+  const simpsons = await fs
+    .readFile('./simpsons.json', 'utf-8');
   const convertedSimp = JSON.parse(simpsons);
   const charsToRemove = convertedSimp
-  .filter((simpsons) => simpsons.id !== '6' && simpsons.id !== '10');
+    .filter((simpsons) => simpsons.id !== '6' && simpsons.id !== '10');
   const remainingChars = fs
     .writeFile('./simpsons.json', JSON.stringify(charsToRemove))
   return remainingChars;  
 }
 
 async function addSimpsonFourthAndFiveth(){
-  const simpsons = await fs.
-  readFile('./simpsons.json', 'utf-8');
-const convertedSimp = JSON.parse(simpsons);
-console.log(convertedSimp);
+  const simpsons = await fs
+    .readFile('./simpsons.json', 'utf-8');
+  const convertedSimp = await JSON.parse(simpsons);
+  const newFamily = await convertedSimp
+    .filter((simpsonsIds) => simpsonsIds.id >= 1 && simpsonsIds.id <= 4);
+  const simpsonsFamily = fs
+    .writeFile('./simpsonFamily.json', JSON.stringify(newFamily));
+  return simpsonsFamily;
 }
+
 
 async function main() {
   await addSimpsonFourthAndFiveth()
