@@ -6,7 +6,7 @@ async function getAllSimpsons(){
   const allSimpsons = await convertedSimpsons.map(({id, name}) => {
     console.log(`${id} - ${name}`)
   })
-  return allSimpsons
+  return allSimpsons;
 }
 
 async function getSimpsonById(id){
@@ -15,14 +15,26 @@ async function getSimpsonById(id){
   const chosenid = await convertedSimpsons
     .find((simpsonId) => Number(simpsonId.id) === id) 
   if (!chosenid) {
-    throw new Error('id não encontrado')
-  }  
-  return chosenid
+    throw new Error('id não encontrado');
+  }
+  return chosenid;
 }
+async function removeSixthAndTenthChar() {
+  const simpsons = await fs.
+    readFile('./simpsons.json', 'utf-8');
+  const convertedSimp = JSON.parse(simpsons);
+  const charsToRemove = convertedSimp
+  .filter((simpsons) => simpsons.id !== '6' && simpsons.id !== '10');
+  const remainingChars = fs
+    .writeFile('./simpsons.json', JSON.stringify(charsToRemove))
+  return remainingChars;  
+}
+
 async function main() {
+  const removedSimps = await removeSixthAndTenthChar();
   // await getAllSimpsons();
-  const simpson = await getSimpsonById(12312);
-  const { id, name } = await simpson; 
-  console.log(`${id} - ${name}`)
+  // const simpson = await getSimpsonById(12312);
+  // const { id, name } = await simpson; 
+  // console.log(`${id} - ${name}`)
 }
 main();
