@@ -10,7 +10,6 @@
   "author": "joao lee",
   "license": "ISC",
   "dependencies": {
-    "eslint-config-trybe-backend": "^1.0.4",
     "readline-sync": "^1.4.10"
   }
 }
