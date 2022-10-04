@@ -5,7 +5,8 @@
   "main": "bmi.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "bmi": "node bmi.js"
+    "bmi": "node bmi.js",
+    "simpson": "node simpson.js"
   },
   "author": "joao lee",
   "license": "ISC",
