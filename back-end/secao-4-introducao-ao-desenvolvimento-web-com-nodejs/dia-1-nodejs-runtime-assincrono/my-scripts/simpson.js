@@ -42,13 +42,23 @@ async function addSimpsonFourthAndFiveth(){
   return simpsonsFamily;
 }
 
+async function addNelsonMuntz(){
+  const simpsons = await fs
+  .readFile('./simpsonFamily.json', 'utf-8');
+const convertedSimp = await JSON.parse(simpsons);
+convertedSimp.push({ id: 8, name: 'Nelson Muntz'});
+const newFamilyMember = fs
+  .writeFile('./simpsonFamily.json', JSON.stringify(convertedSimp));
+return newFamilyMember;
+}
 
 async function main() {
-  await addSimpsonFourthAndFiveth()
+    await addNelsonMuntz();
+  // await addSimpsonFourthAndFiveth();
   // const removedSimps = await removeSixthAndTenthChar();
   // await getAllSimpsons();
   // const simpson = await getSimpsonById(12312);
   // const { id, name } = await simpson; 
-  // console.log(`${id} - ${name}`)
+  // console.log(`${id} - ${name}`);
 }
 main();
