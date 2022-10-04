@@ -30,8 +30,16 @@ async function removeSixthAndTenthChar() {
   return remainingChars;  
 }
 
+async function addSimpsonFourthAndFiveth(){
+  const simpsons = await fs.
+  readFile('./simpsons.json', 'utf-8');
+const convertedSimp = JSON.parse(simpsons);
+console.log(convertedSimp);
+}
+
 async function main() {
-  const removedSimps = await removeSixthAndTenthChar();
+  await addSimpsonFourthAndFiveth()
+  // const removedSimps = await removeSixthAndTenthChar();
   // await getAllSimpsons();
   // const simpson = await getSimpsonById(12312);
   // const { id, name } = await simpson; 
