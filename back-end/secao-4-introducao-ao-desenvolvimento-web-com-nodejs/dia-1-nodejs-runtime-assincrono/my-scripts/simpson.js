@@ -52,8 +52,23 @@ const newFamilyMember = fs
 return newFamilyMember;
 }
 
+async function addMaggieSimpson() {
+  const simpsonFamily = await fs
+    .readFile('./simpsonFamily.json', 'utf-8');
+  const convertedSimp = await JSON.parse(simpsonFamily);
+  const removeNelson = await convertedSimp 
+    .filter((member) => member.id !== 8)
+  const maggieSimpson = { id: '15', name: 'Maggie Simpson' };
+  const addMaggie = [...removeNelson, maggieSimpson];
+  const fullFamily = fs
+    .writeFile('./simpsonFamily.json', JSON.stringify(addMaggie));
+  return fullFamily
+} 
+
+
 async function main() {
-    await addNelsonMuntz();
+  await addMaggieSimpson();
+    // await addNelsonMuntz();
   // await addSimpsonFourthAndFiveth();
   // const removedSimps = await removeSixthAndTenthChar();
   // await getAllSimpsons();

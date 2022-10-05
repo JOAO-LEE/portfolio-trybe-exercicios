@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bmi": "node bmi.js",
-    "simpson": "node simpson.js"
+    "simpson": "node simpson.js",
+    "fibonnacci": "node fibonacci.js"
   },
   "author": "joao lee",
   "license": "ISC",
