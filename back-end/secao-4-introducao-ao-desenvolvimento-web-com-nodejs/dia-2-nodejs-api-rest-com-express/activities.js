@@ -15,3 +15,7 @@ const activities = [
     status: 'Feito',
   },
 ];
+
+module.exports = {
+  activities
+};
