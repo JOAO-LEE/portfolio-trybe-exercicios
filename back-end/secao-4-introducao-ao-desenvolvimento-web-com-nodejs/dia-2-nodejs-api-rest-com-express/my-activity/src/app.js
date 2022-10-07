@@ -1,4 +1,5 @@
 const express = require('express');
+const { activities } = require('./activities');
 
 const app = express();
 
