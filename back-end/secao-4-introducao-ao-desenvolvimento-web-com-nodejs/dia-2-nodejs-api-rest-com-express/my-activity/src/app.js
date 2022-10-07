@@ -31,6 +31,6 @@ app.get('/search/myActivities/', (req, resp) => {
   resp.status(200).json({ activities: searchedActivity });
 });
 
-export default {
+module.exports = {
   app,
 };
