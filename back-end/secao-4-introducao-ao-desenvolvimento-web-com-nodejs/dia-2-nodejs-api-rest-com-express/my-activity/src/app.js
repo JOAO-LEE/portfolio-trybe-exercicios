@@ -1,5 +1,4 @@
 const express = require('express');
-const { activities } = require('./activities');
 
 const app = express();
 
@@ -21,6 +20,17 @@ app.get('/filter/myActivities/', (req, resp) => {
   resp.status(200).json({ activities: activityByFilter });
 });
 
-module.exports = {
+app.get('/search/myActivities/', (req, resp) => {
+  const { q } = req.query;
+
+  const searchedActivity = activities.filter((activity) => activity.description.includes(q));
+
+  if (!searchedActivity) {
+    return [];
+  }
+  resp.status(200).json({ activities: searchedActivity });
+});
+
+export default {
   app,
 };

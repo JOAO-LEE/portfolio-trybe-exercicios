@@ -1,0 +1,11 @@
+{
+  "name": "my-activity",
+  "version": "1.0.0",
+  "description": "To do list CRUD",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "joãolee",
+  "license": "ISC"
+}
