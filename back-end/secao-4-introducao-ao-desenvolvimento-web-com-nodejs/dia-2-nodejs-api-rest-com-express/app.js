@@ -12,6 +12,15 @@ app.get('/myActivities/:id', (req, resp) => {
   resp.status(200).json(activityById);
 });
 
+app.get('/filter/myActivities/', (req, resp) => {
+  const { status } = req.query;
+  let activityByFilter = activities;
+  if (status) {
+    activityByFilter = activities.filter((activity) => activity.status === status);
+  }
+  resp.status(200).json({ activities: activityByFilter });
+});
+
 module.exports = {
-  app
+  app,
 };

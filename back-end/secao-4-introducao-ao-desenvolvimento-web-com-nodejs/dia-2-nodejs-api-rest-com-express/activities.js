@@ -17,5 +17,5 @@ const activities = [
 ];
 
 module.exports = {
-  activities
+  activities,
 };
