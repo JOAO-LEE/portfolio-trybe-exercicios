@@ -1,10 +1,11 @@
 const express = require('express');
+const { validateName } = require('./middlewares/nameValidation');
 
 const app = express();
 
 app.use(express.json());
 
-app.post('/activities', (req, resp) => {
+app.post('/activities', validateName, (req, resp) => {
   console.log(req.body);
   resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
 });
