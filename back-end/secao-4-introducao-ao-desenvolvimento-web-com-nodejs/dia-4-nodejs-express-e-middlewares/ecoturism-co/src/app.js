@@ -5,8 +5,7 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/activities', validateName, (req, resp) => {
-  console.log(req.body);
+app.post('/activities', validateName, (_req, resp) => {
   resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
 });
 
