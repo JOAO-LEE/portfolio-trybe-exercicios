@@ -32,21 +32,21 @@ const validFormatDate = (req, resp, next) => {
   next();
 };
 
-// const validateRating = (req, resp, next) => {
-//   const { description: { rating } } = req.body
+const validateRating = (req, resp, next) => {
+  const { description: { rating } } = req.body
 
-//   const validRating = (rating >= 1 && rating <= 5);
-//   if (!validRating) {
-//     resp.status(400).json({ "message": "O campo rating deve ser um número inteiro entre 1 e 5" });
-//   };
+  const validRating = (rating >= 1 && rating <= 5);
+  if (!validRating) {
+    resp.status(400).json({ "message": "O campo rating deve ser um número inteiro entre 1 e 5" });
+  };
 
-//   next();
+  next();
 
-// };
+};
 
 
 module.exports = {
   descriptionValidation,
   validFormatDate,
-  // validateRating
+  validateRating
 };
