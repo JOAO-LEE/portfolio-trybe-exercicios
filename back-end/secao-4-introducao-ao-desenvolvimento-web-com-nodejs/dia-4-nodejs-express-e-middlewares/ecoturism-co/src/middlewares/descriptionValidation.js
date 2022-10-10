@@ -44,9 +44,25 @@ const validateRating = (req, resp, next) => {
 
 };
 
+const validateDifficulty = (req, resp, next) => {
+  const { description: { difficulty } } = req.body;
+  
+  const difficultyOptions = ["Fácil", "Médio", "Difícil"];
+
+  const validDifficulty = Object.values(difficulty.includes(difficultyOptions));
+
+  if(!validDifficulty) {
+    resp.status(400).json({ "message": "O campo difficulty deve ser \'Fácil\', \'Médio\' ou \'Difícil\'" });
+  };
+
+  next();
+
+};
+
 
 module.exports = {
   descriptionValidation,
   validFormatDate,
-  validateRating
+  validateRating,
+  validateDifficulty
 };
