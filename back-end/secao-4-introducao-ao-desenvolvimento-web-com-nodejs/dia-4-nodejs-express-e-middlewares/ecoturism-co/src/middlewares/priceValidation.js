@@ -11,7 +11,7 @@ const priceValidation = (req, resp, next) => {
   next();
   
 };
-
+//teste
 module.exports ={
   priceValidation
 }
