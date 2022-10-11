@@ -8,21 +8,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(priceValidation, validateName, descriptionValidation, validFormatDate, validateRating, validateDifficulty);
-
-app.get('/signup', registryMiddleware, (req, resp) => {
-  const accountInfo = req.body
-  console.log(accountInfo)
-  resp.status(200).json(accountInfo);
-});
-
-app.post('/signup', registryMiddleware, (_req, resp) => {
-  resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
-});
-
-app.post('/activities', (_req, resp) => {
-  resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
-});
+app.use(validateName, priceValidation, descriptionValidation, validFormatDate, validateRating, validateDifficulty);
 
 app.get('/activities', (req, resp) => {
   const activities = req.body;
@@ -30,8 +16,9 @@ app.get('/activities', (req, resp) => {
   resp.status(200).json(activities)
 });
 
-
-
+app.post('/activities', (_req, resp) => {
+  resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
+});
 
 module.exports = {
   app
