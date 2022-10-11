@@ -7,16 +7,17 @@ const app = express();
 
 app.use(express.json());
 
-app.use(priceValidation, validateName, descriptionValidation, validFormatDate, validateRating, validateDifficulty);
-
-app.post('/activities', (_req, resp) => {
-  resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
-});
+app.use(validateName, priceValidation, descriptionValidation, validFormatDate, validateRating, validateDifficulty);
 
 app.get('/activities', (req, resp) => {
   const activities = req.body;
   resp.status(200).json(activities)
 });
+
+app.post('/activities', (_req, resp) => {
+  resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
+});
+
 
 module.exports = {
   app
