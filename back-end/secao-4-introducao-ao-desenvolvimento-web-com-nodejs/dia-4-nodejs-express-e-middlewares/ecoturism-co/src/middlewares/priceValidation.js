@@ -12,6 +12,6 @@ const priceValidation = (req, resp, next) => {
   
 };
 
-module.exports ={
+module.exports = {
   priceValidation
 }
