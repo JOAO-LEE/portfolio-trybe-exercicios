@@ -37,7 +37,7 @@ const validateRating = (req, resp, next) => {
 
   const validRating = (rating >= 1 && rating <= 5);
   if (!validRating) {
-    resp.status(400).json({ "message": "O campo rating deve ser um número inteiro entre 1 e 5" });
+    return resp.status(400).json({ "message": "O campo rating deve ser um número inteiro entre 1 e 5" });
   };
 
   next();
@@ -49,10 +49,8 @@ const validateDifficulty = (req, resp, next) => {
   
   const difficultyOptions = ["Fácil", "Médio", "Difícil"];
 
-  const validDifficulty = Object.values(difficulty.includes(difficultyOptions));
-
-  if(!validDifficulty) {
-    resp.status(400).json({ "message": "O campo difficulty deve ser \'Fácil\', \'Médio\' ou \'Difícil\'" });
+  if(!difficultyOptions.includes(difficulty)) {
+    return resp.status(400).json({ "message": "O campo difficulty deve ser \'Fácil\', \'Médio\' ou \'Difícil\'" });
   };
 
   next();
