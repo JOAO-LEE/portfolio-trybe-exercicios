@@ -8,8 +8,6 @@ const route = express.Router();
 
 route.use(express.json());
 
-// route.use();
-
 route.post('/activities', validateName, priceValidation, descriptionValidation, validFormatDate, validateRating, validateDifficulty, (_req, resp) => {
   resp.status(201).json({ message: "Atividade cadastrada com sucesso!" })
 });
