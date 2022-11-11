@@ -13,6 +13,12 @@ const getById = async (req, resp) => {
   return resp.status(200).json(message);
 };
 
+const insertBook = async (req, resp) => {
+  const bookToCreate = req.body;
+  const insertedBook = await bookService.insertBook(bookToCreate);
+  return resp.status(200).json(insertedBook.message);
+};
+
 module.exports = {
   getBooks,
   getById,
