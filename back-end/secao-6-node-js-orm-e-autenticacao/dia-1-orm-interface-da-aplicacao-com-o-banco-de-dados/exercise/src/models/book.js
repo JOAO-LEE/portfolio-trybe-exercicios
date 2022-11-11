@@ -1,15 +1,12 @@
 const BooksSchema = (sequelize, DataTypes) => {
   const BooksTable = sequelize.define('Book', {
-    id: DataTypes.INTEGER,
     title: DataTypes.STRING,
     author: DataTypes.STRING,
-    pageQuantity: DataTypes.INTEGER,
-    createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE
+    page_quantity: DataTypes.INTEGER,
   },
     {
       tableName: 'books',
-      underscored: true
+      timestamps: false,
     });
   return BooksTable;
 };

@@ -1,4 +1,5 @@
 'use strict';
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -17,17 +18,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      pageQuantity: {
+      page_quantity: {
         allowNull: true,
         type: Sequelize.INTEGER
-      },
-      created_at: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updated_at: {
-        allowNull: false,
-        type: Sequelize.DATE
       }
     });
   },
