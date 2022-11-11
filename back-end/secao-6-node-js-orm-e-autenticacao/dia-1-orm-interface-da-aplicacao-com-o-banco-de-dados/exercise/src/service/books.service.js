@@ -9,10 +9,17 @@ const getBooks = async () => {
 const getById = async (id) => {
   const foundBook = await Book.findByPk(id);
   return { type: null, message: foundBook };
-}
+};
+
+const insertBook = async ({ author, title, page_quantity }) => {
+  const createBook = await Book.create(author, title, page_quantity);
+  const insertedBook = await Book.findByPk(createBook.insertId);
+  return { type: null, message: insertedBook };
+};
 
 module.exports = {
   getBooks,
   getById,
+  insertBook,
 };
 

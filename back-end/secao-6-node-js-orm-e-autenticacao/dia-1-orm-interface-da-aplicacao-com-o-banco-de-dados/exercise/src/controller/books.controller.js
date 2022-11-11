@@ -13,7 +13,6 @@ const getById = async (req, resp) => {
   return resp.status(200).json(message);
 };
 
-
 module.exports = {
   getBooks,
   getById,
