@@ -1,5 +1,5 @@
 const BooksSchema = (sequelize, DataTypes) => {
-  const BooksTabel = sequelize.define('Book', {
+  const BooksTable = sequelize.define('Book', {
     id: DataTypes.INTEGER,
     title: DataTypes.STRING,
     author: DataTypes.STRING,
@@ -11,6 +11,7 @@ const BooksSchema = (sequelize, DataTypes) => {
       tableName: 'books',
       underscored: true
     });
-  return BooksTabel;
+  return BooksTable;
 };
+
 module.exports = BooksSchema;
