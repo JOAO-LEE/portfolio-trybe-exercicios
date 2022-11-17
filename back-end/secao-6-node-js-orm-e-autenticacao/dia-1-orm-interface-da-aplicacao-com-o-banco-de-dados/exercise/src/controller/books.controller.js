@@ -19,8 +19,16 @@ const insertBook = async (req, resp) => {
   return resp.status(200).json(insertedBook.message);
 };
 
+const updateBook = async (req, resp) => {
+  const { id } = req.params;
+  const bookToUpdate = req.body;
+  const { message } = await bookService.updateBook(id, bookToUpdate);
+  return resp.status(200).json({ message });
+};
+
 module.exports = {
   getBooks,
   getById,
   insertBook,
+  updateBook,
 };
