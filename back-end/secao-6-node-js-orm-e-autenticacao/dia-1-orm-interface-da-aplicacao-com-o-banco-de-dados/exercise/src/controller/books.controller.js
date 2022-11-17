@@ -32,4 +32,5 @@ module.exports = {
   getById,
   insertBook,
   updateBook,
+  // deletedBook,
 };
