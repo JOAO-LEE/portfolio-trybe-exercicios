@@ -18,8 +18,8 @@ const insertBook = async ({ title, author, page_quantity }) => {
 };
 
 const updateBook = async (id, { title, author, page_quantity }) => {
-  await Book.update({ title, author, page_quantity }, { where: { id } });
-  return { type: null, message: "Livro atualizado com sucesso!" };
+  const [update] = await Book.update({ title, author, page_quantity }, { where: { id } });
+  return update;
 };
 
 

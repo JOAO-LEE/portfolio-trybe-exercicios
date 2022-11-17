@@ -22,7 +22,8 @@ const insertBook = async (req, resp) => {
 const updateBook = async (req, resp) => {
   const { id } = req.params;
   const bookToUpdate = req.body;
-  const { message } = await bookService.updateBook(id, bookToUpdate);
+  const updateBook = await bookService.updateBook(id, bookToUpdate);
+  if (!updateBook) return resp.status(404).json({ message: 'Book not found' });
   return resp.status(200).json({ message });
 };
 
