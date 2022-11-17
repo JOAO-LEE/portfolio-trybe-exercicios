@@ -24,7 +24,6 @@ const updateBook = async (id, { title, author, page_quantity }) => {
 
 const deleteBook = async (id) => {
   const deletedBook = await Book.destroy({ where: { id } });
-  console.log(deletedBook);
   return deletedBook;
 };
 
