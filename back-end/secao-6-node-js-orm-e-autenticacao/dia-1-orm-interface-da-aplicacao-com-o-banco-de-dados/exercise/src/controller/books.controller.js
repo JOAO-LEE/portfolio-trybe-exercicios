@@ -22,4 +22,5 @@ const insertBook = async (req, resp) => {
 module.exports = {
   getBooks,
   getById,
+  insertBook,
 };

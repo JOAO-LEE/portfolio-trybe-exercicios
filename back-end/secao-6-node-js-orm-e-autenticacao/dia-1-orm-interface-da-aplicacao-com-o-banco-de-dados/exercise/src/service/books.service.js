@@ -11,9 +11,10 @@ const getById = async (id) => {
   return { type: null, message: foundBook };
 };
 
-const insertBook = async ({ author, title, page_quantity }) => {
-  const createBook = await Book.create(author, title, page_quantity);
-  const insertedBook = await Book.findByPk(createBook.insertId);
+const insertBook = async ({ title, author, page_quantity }) => {
+  const { dataValues: { id } } = await Book.create({ title, author, page_quantity });
+  // console.log(createBook.dataValues);
+  const insertedBook = await Book.findByPk(id);
   return { type: null, message: insertedBook };
 };
 
