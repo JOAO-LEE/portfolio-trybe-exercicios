@@ -30,3 +30,14 @@ const sortInput = (param: number[]) => {
 };
 
 console.log(sortInput(numberList));
+
+const peopleInput = {
+  name: 'Rui',
+  age: 23,
+};
+
+const createSimpleSentence = (param: typeof peopleInput) => {
+  return `Olá, meu nome é ${param.name} e tenho ${param.age} anos.`;
+}
+
+console.log(createSimpleSentence(peopleInput));
