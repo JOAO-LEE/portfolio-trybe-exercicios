@@ -12,3 +12,13 @@ const isItAPrime = (param: number)  => {
 isItAPrime(numberInput)
   ? console.log(`${numberInput} é primo`)
   : console.log(`${numberInput} não é primo`);
+
+
+const emailInput = 'email@email.com';
+
+const validateEmailFormat = (param: string) => {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(param);
+};
+
+console.log(validateEmailFormat(emailInput))
