@@ -23,11 +23,11 @@ class Car {
   }
 
   speedUp(velocity: string): void {
-    console.log(`Velocidade aumentada para ${velocity}`);
+    console.log(`Velocidade aumentada para ${velocity}km/h`);
   }
 
   speedDown(velocity: string): void {
-    console.log(`Velocidade reduzida para ${velocity}`);
+    console.log(`Velocidade reduzida para ${velocity}km/h`);
   }
 
   stop(): void {
