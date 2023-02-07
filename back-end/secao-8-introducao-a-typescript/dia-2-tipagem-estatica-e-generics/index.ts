@@ -1,3 +1,5 @@
+import Car from "./carClassExercise";
+
 const newCar = new Car('Volkswagen', 'prata', 4);
 
 newCar.turnOn();

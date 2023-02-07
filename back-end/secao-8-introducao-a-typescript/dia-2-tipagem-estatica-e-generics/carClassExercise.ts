@@ -1,4 +1,4 @@
-class Car {
+export default class Car {
 
   brand: string;
   color: string;
