@@ -1,4 +1,4 @@
-export default class PessoaEstudante {
+export class PessoaEstudante {
   private matricula: number;
   private nome: string;
   private notasTeste: number[];
@@ -11,9 +11,10 @@ export default class PessoaEstudante {
     this.notasTrabalho = notasTrabalho;
   }
    calculaTotal(): number {
-    const totalTeste = this.notasTeste.reduce((prev, curr) => prev + curr, 0)
-    const totalTrabalho = this.notasTrabalho.reduce((prev, curr) => prev + curr, 0)
-    return totalTeste + totalTrabalho;
+
+    const allGrades = [...this.notasTeste, ...this.notasTrabalho]
+    const total = allGrades.reduce((acc, curr) => acc + curr, 0)
+    return total
   }
    calculaMedia(): number {
     const total = this.calculaTotal();
@@ -21,5 +22,8 @@ export default class PessoaEstudante {
   }
 }
 
-const student1 = new PessoaEstudante(8148, 'Osvaldo Henrique', [10, 9, 7, 8], [10, 9]);
-console.log(student1.calculaMedia());
+const student1 = new PessoaEstudante(1111, 'Osvaldo', [1, 2, 3, 4], [1, 2]);
+// console.log(student1.calculaTotal());
+
+
+
