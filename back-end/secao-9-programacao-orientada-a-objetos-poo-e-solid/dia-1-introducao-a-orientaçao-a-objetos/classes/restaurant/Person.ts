@@ -1,6 +1,6 @@
 //EXERCÍCIO 3 
 
-export class Person {
+export default class Person {
   private _name: string;
 
   constructor(name: string) {
@@ -15,3 +15,4 @@ export class Person {
     this._name = value;
   }
 }
+
