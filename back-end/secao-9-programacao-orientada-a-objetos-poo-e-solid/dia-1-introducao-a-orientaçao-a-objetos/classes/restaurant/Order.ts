@@ -45,4 +45,14 @@ export default class Order {
   set discount(value: number) {
     this._discount = value;
   }
+
+  calculateTotal(): number {
+    return this._products.reduce((acc, curr) => acc + curr.price, 0);
+  }
+
+  calculateTotalWithDiscount(): number {
+    const total = this.calculateTotal();
+    const discount = total * this._discount;
+    return total - discount
+  }
 }
