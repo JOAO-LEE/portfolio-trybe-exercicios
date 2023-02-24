@@ -1,4 +1,3 @@
-// src/Clube.ts
 import Quadra from './Quadra';
 
 class Clube {
